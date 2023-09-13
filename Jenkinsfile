@@ -25,9 +25,6 @@ pipeline {
 
             agent {
                 dockerfile {
-                    // alwaysPull false
-                    // image 'microsoft/dotnet:2.2-sdk'
-                    // reuseNode false
                     args '-u root:root'
                 }
             }
@@ -38,37 +35,6 @@ pipeline {
 
             }
 
-        }
-
-
-        stage('Sock') {
-
-            agent {
-                dockerfile {
-                    args '-u root:root -v /var/run/docker.sock:/var/run/docker.sock'
-                }
-            }
-
-            steps {
-
-
-                     sh  ''' echo 'hajsaks' '''
-                
-            }
-
-        }
-
- 
-    }
-    post {
-
-        always {
-            node('main'){
-                
-                sh  '''
-               
-                '''
-            }
         }
     }
 }
