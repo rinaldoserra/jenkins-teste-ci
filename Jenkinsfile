@@ -1,17 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('compilando') {
+    stage('build') {
       steps {
         sh 'echo Building ${BRANCH_NAME}...'
       }
     }
-    stage('testando') {
+    stage('test') {
       steps {
         sh 'echo Teste ${BRANCH_NAME}...'
       }
     }
-    stage('publicando') {
+    stage('public') {
       steps {
         sh 'echo Public ${BRANCH_NAME}...'
       }
