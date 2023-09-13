@@ -46,15 +46,5 @@ pipeline {
 
  
     }
-    post {
 
-        always {
-            node('main'){
-                
-                sh  '''
-               
-                '''
-            }
-        }
-    }
 }
