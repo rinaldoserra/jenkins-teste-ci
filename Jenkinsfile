@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo Building ${BRANCH_NAME}...'
+        sh 'Echo Building ${BRANCH_NAME}...'
       }
     }
     stage('test') {
       steps {
-        sh 'echo Teste ${BRANCH_NAME}...'
+        sh 'Echo Teste ${BRANCH_NAME}...'
       }
     }
     stage('public') {
       steps {
-        sh 'echo Public ${BRANCH_NAME}...'
+        sh 'Echo Public ${BRANCH_NAME}...'
       }
     }
   }
